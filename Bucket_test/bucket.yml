@@ -1,0 +1,6 @@
+flows:
+  f08e3bff-18e1-4d62-8a6b-b639176a6f01: {ver: 1, file: flow.snapshot, comments: '',
+    author: anonymous, created: 1670408709521, flowName: flow, flowDesc: Add getinputfile
+      processor to the flow}
+layoutVer: 1
+bucketId: d9dce6e8-3b9f-4f2c-80aa-0b846ef1a84c

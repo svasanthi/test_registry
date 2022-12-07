@@ -1,0 +1,606 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : {
+        "8661bcde-5c3e-3343-b981-f8ecbd747760" : {
+          "identifier" : "8661bcde-5c3e-3343-b981-f8ecbd747760",
+          "name" : "CSVRecordSetWriter"
+        },
+        "dc268ab6-136f-3623-9f0c-856dea931b14" : {
+          "identifier" : "dc268ab6-136f-3623-9f0c-856dea931b14",
+          "name" : "AvroReader"
+        },
+        "068fa560-271b-356c-b22a-5deef50303ed" : {
+          "identifier" : "068fa560-271b-356c-b22a-5deef50303ed",
+          "name" : "DBCPConnectionPool"
+        }
+      },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 1152.0,
+            "y" : 272.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+            "id" : "5a723208-6093-39d5-95d1-184b65d04e70",
+            "instanceIdentifier" : "ec144d77-0184-1000-7f72-53823b9fe588",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+          "identifier" : "3e99d8b6-3a6f-3729-b1e8-77eccac4637f",
+          "instanceIdentifier" : "ec146e70-0184-1000-5cbb-045f061674df",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+            "id" : "e735b841-c66d-3159-8f7d-ba46a59e6254",
+            "instanceIdentifier" : "ec12e65a-0184-1000-4929-479210e9dad4",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 1152.0,
+            "y" : 104.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+            "id" : "e735b841-c66d-3159-8f7d-ba46a59e6254",
+            "instanceIdentifier" : "ec12e65a-0184-1000-4929-479210e9dad4",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+          "identifier" : "50762fb6-8cfd-3da4-861e-9242b4e7213a",
+          "instanceIdentifier" : "ec133cb3-0184-1000-feed-c308a8ba4dd2",
+          "labelIndex" : 0,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+            "id" : "c8c3d012-6bd9-3cd3-a20e-792705242b13",
+            "instanceIdentifier" : "ebfd73a8-0184-1000-99a1-16863dc16b83",
+            "name" : "QueryDatabaseTable",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 440.0,
+            "y" : 184.0
+          }, {
+            "x" : 440.0,
+            "y" : 344.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+            "id" : "5a723208-6093-39d5-95d1-184b65d04e70",
+            "instanceIdentifier" : "ec144d77-0184-1000-7f72-53823b9fe588",
+            "name" : "UpdateAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+          "identifier" : "ff573b29-4e6e-3027-82a0-8fa2c05f7f6a",
+          "instanceIdentifier" : "ec148793-0184-1000-0215-792d071177ea",
+          "labelIndex" : 2,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "failure" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+            "id" : "e735b841-c66d-3159-8f7d-ba46a59e6254",
+            "instanceIdentifier" : "ec12e65a-0184-1000-4929-479210e9dad4",
+            "name" : "ConvertRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+        "inputPorts" : [ ],
+        "instanceIdentifier" : "ebfcdb33-0184-1000-000e-8526abfa7080",
+        "labels" : [ ],
+        "name" : "Lispendens to Salesforce",
+        "outputPorts" : [ ],
+        "parameterContextName" : "LeadTypeFlow",
+        "position" : {
+          "x" : 6165.819058867157,
+          "y" : -146.33096991103253
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+          "identifier" : "e735b841-c66d-3159-8f7d-ba46a59e6254",
+          "instanceIdentifier" : "ec12e65a-0184-1000-4929-479210e9dad4",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ConvertRecord",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 608.0,
+            "y" : 120.0
+          },
+          "properties" : {
+            "record-writer" : "8661bcde-5c3e-3343-b981-f8ecbd747760",
+            "record-reader" : "dc268ab6-136f-3623-9f0c-856dea931b14",
+            "include-zero-record-flowfiles" : "true"
+          },
+          "propertyDescriptors" : {
+            "record-writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "record-writer",
+              "sensitive" : false
+            },
+            "record-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-reader",
+              "sensitive" : false
+            },
+            "include-zero-record-flowfiles" : {
+              "displayName" : "Include Zero Record FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "include-zero-record-flowfiles",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+          "identifier" : "c8c3d012-6bd9-3cd3-a20e-792705242b13",
+          "instanceIdentifier" : "ebfd73a8-0184-1000-99a1-16863dc16b83",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "QueryDatabaseTable",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 608.0,
+            "y" : -40.0
+          },
+          "properties" : {
+            "Table Name" : "property_details",
+            "db-fetch-db-type" : "PostgreSQL",
+            "dbf-default-precision" : "10",
+            "Max Wait Time" : "0 seconds",
+            "Database Connection Pooling Service" : "068fa560-271b-356c-b22a-5deef50303ed",
+            "dbf-user-logical-types" : "false",
+            "qdbt-output-batch-size" : "0",
+            "qdbt-max-rows" : "0",
+            "qdbt-max-frags" : "0",
+            "dbf-default-scale" : "0",
+            "initial-load-strategy" : "Start at Beginning",
+            "Fetch Size" : "0",
+            "db-fetch-sql-query" : "select duval_county.lispendens_details.*, duval_county.property_details.lead_type FROM duval_county.lispendens_details\nJOIN duval_county.property_details USING(real_estate_number)",
+            "dbf-normalize" : "false"
+          },
+          "propertyDescriptors" : {
+            "Table Name" : {
+              "displayName" : "Table Name",
+              "identifiesControllerService" : false,
+              "name" : "Table Name",
+              "sensitive" : false
+            },
+            "db-fetch-db-type" : {
+              "displayName" : "Database Type",
+              "identifiesControllerService" : false,
+              "name" : "db-fetch-db-type",
+              "sensitive" : false
+            },
+            "dbf-default-precision" : {
+              "displayName" : "Default Decimal Precision",
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-precision",
+              "sensitive" : false
+            },
+            "Max Wait Time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Connection Pooling Service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "Database Connection Pooling Service",
+              "sensitive" : false
+            },
+            "Maximum-value Columns" : {
+              "displayName" : "Maximum-value Columns",
+              "identifiesControllerService" : false,
+              "name" : "Maximum-value Columns",
+              "sensitive" : false
+            },
+            "dbf-user-logical-types" : {
+              "displayName" : "Use Avro Logical Types",
+              "identifiesControllerService" : false,
+              "name" : "dbf-user-logical-types",
+              "sensitive" : false
+            },
+            "qdbt-output-batch-size" : {
+              "displayName" : "Output Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "qdbt-output-batch-size",
+              "sensitive" : false
+            },
+            "qdbt-max-rows" : {
+              "displayName" : "Max Rows Per Flow File",
+              "identifiesControllerService" : false,
+              "name" : "qdbt-max-rows",
+              "sensitive" : false
+            },
+            "qdbt-max-frags" : {
+              "displayName" : "Maximum Number of Fragments",
+              "identifiesControllerService" : false,
+              "name" : "qdbt-max-frags",
+              "sensitive" : false
+            },
+            "dbf-default-scale" : {
+              "displayName" : "Default Decimal Scale",
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-scale",
+              "sensitive" : false
+            },
+            "initial-load-strategy" : {
+              "displayName" : "Initial Load Strategy",
+              "identifiesControllerService" : false,
+              "name" : "initial-load-strategy",
+              "sensitive" : false
+            },
+            "Fetch Size" : {
+              "displayName" : "Fetch Size",
+              "identifiesControllerService" : false,
+              "name" : "Fetch Size",
+              "sensitive" : false
+            },
+            "db-fetch-sql-query" : {
+              "displayName" : "Custom Query",
+              "identifiesControllerService" : false,
+              "name" : "db-fetch-sql-query",
+              "sensitive" : false
+            },
+            "Columns to Return" : {
+              "displayName" : "Columns to Return",
+              "identifiesControllerService" : false,
+              "name" : "Columns to Return",
+              "sensitive" : false
+            },
+            "db-fetch-where-clause" : {
+              "displayName" : "Additional WHERE clause",
+              "identifiesControllerService" : false,
+              "name" : "db-fetch-where-clause",
+              "sensitive" : false
+            },
+            "dbf-normalize" : {
+              "displayName" : "Normalize Table/Column Names",
+              "identifiesControllerService" : false,
+              "name" : "dbf-normalize",
+              "sensitive" : false
+            },
+            "transaction-isolation-level" : {
+              "displayName" : "Transaction Isolation Level",
+              "identifiesControllerService" : false,
+              "name" : "transaction-isolation-level",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.QueryDatabaseTable",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.17.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d127b4ce-959b-3f33-8243-5bda0920cec6",
+          "identifier" : "5a723208-6093-39d5-95d1-184b65d04e70",
+          "instanceIdentifier" : "ec144d77-0184-1000-7f72-53823b9fe588",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 608.0,
+            "y" : 288.0
+          },
+          "properties" : {
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : {
+        "LeadTypeFlow" : {
+          "componentType" : "PARAMETER_CONTEXT",
+          "inheritedParameterContexts" : [ ],
+          "name" : "LeadTypeFlow",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "lispendens.lead_type",
+            "sensitive" : false,
+            "value" : "Lispendens"
+          }, {
+            "description" : "",
+            "name" : "electric_shutoff.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Electric Shutoff"
+          }, {
+            "description" : "",
+            "name" : "smtp.password",
+            "sensitive" : true
+          }, {
+            "description" : "",
+            "name" : "unpaid_taxes_lead.input_fiile",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Unpaid Taxes Lead Type"
+          }, {
+            "description" : "",
+            "name" : "unsafe_structure.lead_type",
+            "sensitive" : false,
+            "value" : "Unsafe Structures"
+          }, {
+            "description" : "",
+            "name" : "boardup.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Board Up Case"
+          }, {
+            "description" : "",
+            "name" : "Database Connection URL",
+            "sensitive" : false,
+            "value" : "jdbc:postgresql://127.0.0.1:5432/postgres"
+          }, {
+            "description" : "",
+            "name" : "electric_shutoff.lead_type",
+            "sensitive" : false,
+            "value" : "Electric Shut Off"
+          }, {
+            "description" : "",
+            "name" : "unpaid_taxes_details.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Unpaid Taxes Details"
+          }, {
+            "description" : "",
+            "name" : "nuisance.lead_type",
+            "sensitive" : false,
+            "value" : "Nuisance Liens"
+          }, {
+            "description" : "",
+            "name" : "to",
+            "sensitive" : false,
+            "value" : "pavan@ozellrealestate.com,naveen@ozellrealestate.com,sorna@ozellrealestate.com,brindha@ozellrealestate.com,vasanthi@ozellrealestate.com,divya@ozellrealestate.com"
+          }, {
+            "description" : "",
+            "name" : "DB Driver Class Name",
+            "sensitive" : false,
+            "value" : "org.postgresql.Driver"
+          }, {
+            "description" : "",
+            "name" : "username",
+            "sensitive" : false,
+            "value" : "divya@ozellrealestate.com.ozelldev"
+          }, {
+            "description" : "",
+            "name" : "smtp.x_mailer_header",
+            "sensitive" : false,
+            "value" : "NiFi Alert"
+          }, {
+            "description" : "",
+            "name" : "DB User",
+            "sensitive" : false,
+            "value" : "postgres"
+          }, {
+            "description" : "",
+            "name" : "unpaid.lead_type",
+            "sensitive" : false,
+            "value" : "Unpaid Taxes"
+          }, {
+            "description" : "",
+            "name" : "unsafe_structure.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Unsafe Structure"
+          }, {
+            "description" : "",
+            "name" : "nuisance.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Nuisance Case"
+          }, {
+            "description" : "",
+            "name" : "subject",
+            "sensitive" : false,
+            "value" : "Log Message"
+          }, {
+            "description" : "",
+            "name" : "smtp.user_name",
+            "sensitive" : false,
+            "value" : "naveen@ozellrealestate.com"
+          }, {
+            "description" : "",
+            "name" : "Database Driver Location",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\nifi-1.17.0\\lib\\postgresql-42.4.1.jar"
+          }, {
+            "description" : "",
+            "name" : "water_shutoff.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Water Shutoff"
+          }, {
+            "description" : "",
+            "name" : "real_estate_number",
+            "sensitive" : false,
+            "value" : "$['Real-Estate-Number']"
+          }, {
+            "description" : "",
+            "name" : "water_shutoff.lead_type",
+            "sensitive" : false,
+            "value" : "Water Shut Off"
+          }, {
+            "description" : "",
+            "name" : "client_id",
+            "sensitive" : false,
+            "value" : "3MVG9cb9UNjJbdEygYo44.JaGE00DZdAq1MyeDoojeAoj9HGisIWsZ_Q2YV6P9n6g3_9e8WbLEkf6qaCOWson"
+          }, {
+            "description" : "",
+            "name" : "real-estate-number",
+            "sensitive" : false,
+            "value" : "$['APN']"
+          }, {
+            "description" : "",
+            "name" : "password",
+            "sensitive" : false,
+            "value" : "ozell@123"
+          }, {
+            "description" : "",
+            "name" : "grant_type",
+            "sensitive" : false,
+            "value" : "password"
+          }, {
+            "description" : "",
+            "name" : "lispendens.input_file",
+            "sensitive" : false,
+            "value" : "D:\\NIFI\\Demo\\Lispendens Cases"
+          }, {
+            "description" : "",
+            "name" : "from",
+            "sensitive" : false,
+            "value" : "nifi_notification@ozellrealestate.com"
+          }, {
+            "description" : "",
+            "name" : "boardup.lead_type",
+            "sensitive" : false,
+            "value" : "Board Up Cases"
+          }, {
+            "description" : "",
+            "name" : "client_secret",
+            "sensitive" : false,
+            "value" : "6771D519538969F483FD849A41AA856FC86F0ED5FE998D0E0F0C91BDEE26A702"
+          } ]
+        }
+      }
+    }
+  }
+}
